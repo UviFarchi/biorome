@@ -1,10 +1,12 @@
 <script setup>
 import MainFieldGrid from './components/MainFieldGrid.vue'
+import AssemblyArea from './components/AssemblyArea.vue'
 </script>
 
 <template>
   <main>
     <MainFieldGrid />
+    <AssemblyArea />
   </main>
 </template>
 
