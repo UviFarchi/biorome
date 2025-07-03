@@ -69,11 +69,18 @@ export const useVillagerStore = defineStore('villagers', () => {
     }
   }
 
+  function reset() {
+    activeVillagers.value = []
+    score.value = 0
+    villagerId = 0
+  }
+
   return {
     activeVillagers,
     score,
     generateNewVillagers,
     fulfillVillager,
-    decrementTimers
+    decrementTimers,
+    reset
   }
 })

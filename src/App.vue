@@ -2,6 +2,7 @@
 import MainFieldGrid from './components/MainFieldGrid.vue'
 import AssemblyArea from './components/AssemblyArea.vue'
 import VillagerGate from './components/VillagerGate.vue'
+import GameEndPanel from './components/GameEndPanel.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import VillagerGate from './components/VillagerGate.vue'
     <MainFieldGrid />
     <AssemblyArea />
     <VillagerGate />
+    <GameEndPanel />
   </main>
 </template>
 
