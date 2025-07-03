@@ -79,6 +79,28 @@ export const useGameStateStore = defineStore('game', () => {
     win.value = didWin
   }
 
+  function resetGame() {
+    day.value = 1
+    turn.value = 1
+    season.value = seasons[0]
+    weather.value = 'Normal'
+    activeEvents.value = []
+    score.value = 0
+    gameOver.value = false
+    win.value = false
+
+    const board = useBoardStore()
+    board.resetBoard()
+
+    const modules = useModulesStore()
+    modules.resetDailyUses()
+
+    const villagers = useVillagerStore()
+    if (villagers.reset) villagers.reset()
+
+    startDay()
+  }
+
   return {
     day,
     turn,
@@ -95,6 +117,7 @@ export const useGameStateStore = defineStore('game', () => {
     setEvents,
     triggerEvent,
     addScore,
-    endGame
+    endGame,
+    resetGame
   }
 })
