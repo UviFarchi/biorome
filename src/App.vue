@@ -1,12 +1,14 @@
 <script setup>
 import MainFieldGrid from './components/MainFieldGrid.vue'
 import AssemblyArea from './components/AssemblyArea.vue'
+import VillagerGate from './components/VillagerGate.vue'
 </script>
 
 <template>
   <main>
     <MainFieldGrid />
     <AssemblyArea />
+    <VillagerGate />
   </main>
 </template>
 
