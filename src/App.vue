@@ -1,10 +1,10 @@
 <script setup>
-
+import MainFieldGrid from './components/MainFieldGrid.vue'
 </script>
 
 <template>
   <main>
-   Hi!
+    <MainFieldGrid />
   </main>
 </template>
 
