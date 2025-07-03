@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import Plant from '../models/Plant'
-import Animal from '../models/Animal'
-import Soil from '../models/Soil'
+import { createPlant } from '../models/Plant'
+import { createAnimal } from '../models/Animal'
+import { createSoil } from '../models/Soil'
 
 export const useBoardStore = defineStore('board', () => {
   const size = 6
@@ -14,7 +14,7 @@ export const useBoardStore = defineStore('board', () => {
         col,
         plant: null,
         animal: null,
-        soil: new Soil()
+        soil: createSoil({ tilePos: { row, col } })
       }))
     )
   }
